@@ -1,1 +1,18 @@
 <h1 class="text-xl text-bold mb-4">True to Form: A Guide to Reactive Forms</h1>
+
+<form [formGroup]="form">
+  <input type="text" formControlName="firstName" placeholder="First Name" />
+  <input type="text" formControlName="lastName" placeholder="Last Name" />
+  <br />
+  <ng-container>
+    <input type="text" formControlName="street" placeholder="Street" />
+    <input type="text" formControlName="city" placeholder="City" />
+    <input type="text" formControlName="state" placeholder="State" />
+    <input type="text" formControlName="zip" placeholder="Zip" />
+  </ng-container>
+</form>
+<pre>
+  <code>
+    {{ formUpdates$ | async | json}}
+  </code>
+</pre>
